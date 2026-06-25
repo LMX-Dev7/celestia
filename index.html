@@ -41,12 +41,19 @@
     --ff-script:'Mrs Saint Delafield', cursive;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+    width:100%;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+  }
   body{
     font-family:var(--ff-sans);
     background:var(--white);
     color:var(--black);
     overflow-x:hidden;
+    width:100%;
     -webkit-font-smoothing:antialiased;
   }
   ::-webkit-scrollbar{width:10px;}
@@ -157,6 +164,16 @@
   .hero-below h2{font-family:var(--ff-serif);font-weight:500;font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.3;}
   .hero-below h2 em{font-family:var(--ff-script);color:var(--beige-dark);font-style:normal;font-size:1.15em;}
   .hero-below p{margin-top:16px;font-size:.95rem;color:#6b6354;}
+  @media(max-width:480px){
+    .container{padding:0 18px;}
+    #hero{padding:110px 18px 60px;}
+    .ig-card{padding:32px 20px 26px;border-radius:22px;}
+    .stats-row{gap:16px;}
+    .name-row h1{font-size:1.4rem;}
+    .bio{font-size:.95rem;max-width:100%;}
+    .mini-grid img{height:96px;}
+    .hero-below{margin-top:40px;}
+  }
 
   /* REVEAL */
   .reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease, transform .8s ease;}
@@ -286,6 +303,24 @@
     margin-top:80px;padding:26px 0;text-align:center;
     border-top:1px solid rgba(0,0,0,.08);
     font-size:.78rem;color:#9a9284;
+  }
+
+  /* MOBILE FIT — tighten vertical rhythm on phones */
+  @media(max-width:600px){
+    #sobre{padding:80px 0 64px;}
+    #servicios{padding:70px 0;}
+    #galeria{padding:70px 0;}
+    .parallax-wrap{padding:80px 0;}
+    #metricas{padding:64px 0;}
+    #contacto{padding:80px 0 50px;}
+    .sec-title{margin-top:8px;}
+    .about-grid{margin-top:34px;}
+    .services-grid{margin-top:38px;}
+    .gallery-grid{margin-top:38px;}
+    .metrics-grid{margin-top:34px;}
+    .socials{margin-top:36px;}
+    .meta-row{margin-top:30px;}
+    footer{margin-top:56px;}
   }
 </style>
 </head>
